@@ -30,7 +30,7 @@ for i = 1 : n
        for j = i+1:n
            L(j,i) = A(j,i)/A(i,i);
            A(j,:) = A(j,:)-L(j,i)*A(i,:);
-           b(j) = b(j) - L(j,i)*b(j); 
+           b(j) = b(j) - L(j,i)*b(i); 
        end
     else %this means we have to change pivot
         ID = eye(n);

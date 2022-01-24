@@ -24,7 +24,7 @@ for i = 1 : n
        for j = i+1:n
            I = A(j,i)/A(i,i);
            A(j,:) = A(j,:)-I*A(i,:);
-           b(j) = b(j) - I*b(j); 
+           b(j) = b(j) - I*b(i); 
        end
     else %this means we have to change pivot
         ID = eye(n);
